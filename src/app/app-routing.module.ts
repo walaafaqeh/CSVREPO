@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', redirectTo: 'files', pathMatch: 'full' },
+  { path: 'files', loadChildren: () => import('./Features/files/files.module').then(m => m.FilesModule)},
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
