@@ -1,83 +1,4 @@
 {
-  "api": {
-    "walaaAPInew": {
-      "dependsOn": [
-        {
-          "attributes": [
-            "Name",
-            "Arn"
-          ],
-          "category": "function",
-          "resourceName": "walaaNewLambdaFunc"
-        }
-      ],
-      "providerPlugin": "awscloudformation",
-      "service": "API Gateway"
-    }
-  },
-  "auth": {
-    "walaacsvrepo": {
-      "dependsOn": [],
-      "frontendAuthConfig": {
-        "mfaConfiguration": "OFF",
-        "mfaTypes": [
-          "SMS"
-        ],
-        "passwordProtectionSettings": {
-          "passwordPolicyCharacters": [],
-          "passwordPolicyMinLength": 8
-        },
-        "signupAttributes": [
-          "EMAIL"
-        ],
-        "socialProviders": [],
-        "usernameAttributes": [],
-        "verificationMechanisms": [
-          "EMAIL"
-        ]
-      },
-      "providerPlugin": "awscloudformation",
-      "service": "Cognito",
-      "serviceType": "managed"
-    }
-  },
-  "function": {
-    "walaaNewLambdaFunc": {
-      "build": true,
-      "dependsOn": [
-        {
-          "attributeEnvMap": {
-            "Arn": "TABLE_ARN",
-            "Name": "TABLE_NAME"
-          },
-          "attributes": [
-            "Name",
-            "Arn"
-          ],
-          "category": "storage",
-          "resourceName": "WalaaTableNew"
-        }
-      ],
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda"
-    },
-    "walaacsvrepolambdafunc": {
-      "build": true,
-      "dependsOn": [
-        {
-          "attributes": [
-            "Name",
-            "Arn",
-            "StreamArn"
-          ],
-          "category": "storage",
-          "resourceName": "WalaaTableNew"
-        }
-      ],
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda"
-    }
-  },
   "parameters": {
     "AMPLIFY_function_walaaNewLambdaFunc_deploymentBucketName": {
       "usedBy": [
@@ -94,28 +15,6 @@
           "resourceName": "walaaNewLambdaFunc"
         }
       ]
-    },
-    "AMPLIFY_function_walaacsvrepolambdafunc_deploymentBucketName": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "walaacsvrepolambdafunc"
-        }
-      ]
-    },
-    "AMPLIFY_function_walaacsvrepolambdafunc_s3Key": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "walaacsvrepolambdafunc"
-        }
-      ]
-    }
-  },
-  "storage": {
-    "WalaaTableNew": {
-      "providerPlugin": "awscloudformation",
-      "service": "DynamoDB"
     }
   }
 }
