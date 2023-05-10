@@ -1,0 +1,37 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-walaacsvrepo-dev-141306-authRole",
+      "UnauthRoleArn": "arn:aws:iam::376353728436:role/amplify-walaacsvrepo-dev-141306-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::376353728436:role/amplify-walaacsvrepo-dev-141306-authRole",
+      "Region": "eu-west-2",
+      "DeploymentBucketName": "amplify-walaacsvrepo-dev-141306-deployment",
+      "UnauthRoleName": "amplify-walaacsvrepo-dev-141306-unauthRole",
+      "StackName": "amplify-walaacsvrepo-dev-141306",
+      "StackId": "arn:aws:cloudformation:eu-west-2:376353728436:stack/amplify-walaacsvrepo-dev-141306/51b2f2b0-e8da-11ed-bc25-06dae4b2b258",
+      "AmplifyAppId": "d1ty2nrehucs59",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-walaacsvrepo-dev-141306-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    },
+    "categories": {
+      "function": {
+        "walaacsvrepolambdafunc": {
+          "deploymentBucketName": "amplify-walaacsvrepo-dev-141306-deployment",
+          "s3Key": "amplify-builds/walaacsvrepolambdafunc-50704a4562684b35346b-build.zip"
+        },
+        "walaaNewLambdaFunc": {
+          "deploymentBucketName": "amplify-walaacsvrepo-dev-141306-deployment",
+          "s3Key": "amplify-builds/walaaNewLambdaFunc-32706d43334244544a78-build.zip"
+        }
+      },
+      "auth": {
+        "walaacsvrepo": {}
+      },
+      "api": {
+        "walaaAPInew": {}
+      },
+      "storage": {
+        "WalaaTableNew": {}
+      }
+    }
+  }
+}

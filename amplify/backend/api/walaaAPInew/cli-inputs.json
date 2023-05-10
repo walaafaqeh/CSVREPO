@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/csvs": {
+      "name": "/csvs",
+      "lambdaFunction": "walaaNewLambdaFunc",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

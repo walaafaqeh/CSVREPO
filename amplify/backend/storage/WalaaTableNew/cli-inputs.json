@@ -1,0 +1,12 @@
+{
+  "resourceName": "WalaaTableNew",
+  "tableName": "WalaaTableNew",
+  "partitionKey": {
+    "fieldName": "csvs",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": [
+    "walaacsvrepolambdafunc"
+  ]
+}
